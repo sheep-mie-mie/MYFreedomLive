@@ -56,6 +56,47 @@
 #define IOS10 ( IOS >= 10.0)
 
 
+/**
+ 主线程
+ */
+#define MYMINTHREAD(block) dispatch_async(dispatch_get_main_queue(), block)
+/**
+ 弱引用
+ */
+#define MYWEAKSELF __weak typeof(self)weakSelf = self
+
+
+
+#define MYFreedSingletonH(name) + (instancetype)share##name;
+
+#define MYFreedSingletonM(name)\
+static id _instance;\
++ (instancetype)share##name\
+{\
+static dispatch_once_t onceToken;\
+dispatch_once(&onceToken, ^{\
+_instance = [[self alloc] init];\
+});\
+return _instance;\
+}\
++ (instancetype)allocWithZone:(struct _NSZone *)zone\
+{\
+static dispatch_once_t onceToken;\
+dispatch_once(&onceToken, ^{\
+_instance = [super allocWithZone:zone];\
+});\
+return _instance;\
+}\
+- (id)copyWithZone:(NSZone *)zone\
+{\
+return _instance;\
+}\
+
+
+
+
+
+
 
 
 /**

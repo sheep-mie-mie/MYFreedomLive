@@ -27,6 +27,7 @@
 #import "Masonry.h"
 // 刷新
 #import "MBProgressHUD.h"
+#import "MBProgressHUD+Add.h"
 #import "SVProgressHUD.h"
 #import "MJRefresh.h"
 // 数据解析
@@ -49,7 +50,8 @@
 #pragma mark ==============//自定义类\\==============
 // 类目
 #import "UIFont+MY_Font.h"
-
+#import "UIImage+MY_Image.h"
+#import "UIView+MY_View.h"
 
 // app属性
 #import "MYFreedomLive.h"
