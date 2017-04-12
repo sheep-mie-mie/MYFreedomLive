@@ -1,0 +1,74 @@
+//
+//  MYFreedomLive.pch
+//  MYFreedomLive
+//
+//  Created by ifly on 2017/3/20.
+//  Copyright © 2017年 Meiyang. All rights reserved.
+//
+
+#ifndef MYFreedomLive_pch
+#define MYFreedomLive_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+#pragma mark ==============//三方库\\==============
+
+// 网络
+#import "AFNetworking.h"
+#import "GDHNetWorkingManager.h"
+// 工具栏
+#import "CYLTabBarController.h"
+// 键盘
+#import "IQKeyboardManager.h"
+// 适配
+#import "Masonry.h"
+// 刷新
+#import "MBProgressHUD.h"
+#import "SVProgressHUD.h"
+#import "MJRefresh.h"
+// 数据解析
+#import "MJExtension.h"
+// 图片
+#import <SDImageCache.h>
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+// 颜色管理
+#import <UIColor+Wonderful.h>
+#import <UILabel+Wonderful.h>
+// 分栏
+#import "WMPageController.h"
+// 加载视图
+#import "UIScrollView+EmptyDataSet.h"
+// 轮播图
+#import "SDCycleScrollView.h"
+
+
+#pragma mark ==============//自定义类\\==============
+// 类目
+#import "UIFont+MY_Font.h"
+
+
+// app属性
+#import "MYFreedomLive.h"
+// basic类
+#import "MYBasicTabBarController.h"
+// 全局
+#import "MYGlobalManager.h"
+// 网络请求
+#import "MYNetwork.h"
+// 加载
+#import "MY_RefreshHeader.h"
+
+
+
+
+
+
+
+
+#endif
+
+#endif /* MYFreedomLive_pch */

@@ -1,0 +1,73 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - CYLTabBarController (1.10.0)
+  - DZNEmptyDataSet (1.8.1)
+  - GDHNetworking (1.0.2):
+    - AFNetworking (~> 3.1.0)
+    - MBProgressHUD (~> 0.9.2)
+    - XMLDictionary
+  - IQKeyboardManager (4.0.8)
+  - Masonry (1.0.2)
+  - MBProgressHUD (0.9.2)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.1.12)
+  - SDCycleScrollView (1.65):
+    - SDWebImage (~> 3.7)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SVProgressHUD (2.1.2)
+  - WMPageController (2.2.1)
+  - Wonderful (1.2.1)
+  - XMLDictionary (1.4.1)
+
+DEPENDENCIES:
+  - AFNetworking
+  - CYLTabBarController
+  - DZNEmptyDataSet
+  - GDHNetworking
+  - IQKeyboardManager
+  - Masonry
+  - MBProgressHUD (~> 0.9.2)
+  - MJExtension
+  - MJRefresh
+  - SDCycleScrollView
+  - SDWebImage
+  - SVProgressHUD
+  - WMPageController
+  - Wonderful
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CYLTabBarController: 2de9a4c26f50d33574398becf8e7b0aaed794240
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  GDHNetworking: d1231e7dcb8d40f95f1776dd9aedf8af2a33b202
+  IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  WMPageController: 181bcc9b1fb7c9c3466bff66012552953a547d28
+  Wonderful: e46da4dd601c3ae08da576e451be8f4dc740c206
+  XMLDictionary: fa07b6ff422b3a91d47a5de9bc82e3fc04fbd167
+
+PODFILE CHECKSUM: 86979df555f3ea8ed467280c484cd1be2cb26fce
+
+COCOAPODS: 1.2.1.beta.1
