@@ -12,7 +12,6 @@
 		8824378D1E82725A004DC2B2 /* MYNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 8824378C1E82725A004DC2B2 /* MYNetwork.m */; };
 		882437901E82727F004DC2B2 /* MYGlobalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8824378F1E82727F004DC2B2 /* MYGlobalManager.m */; };
 		883CF8AA1E8200D1005CDCDA /* MYLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 883CF8A91E8200D1005CDCDA /* MYLiveViewController.m */; };
-		884F2CE01E8B94B800C7E3C5 /* MYHotPlayerAnchorInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 884F2CDF1E8B94B800C7E3C5 /* MYHotPlayerAnchorInfoView.m */; };
 		8852E0C21E8A13740056D1FC /* MYNewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8852E0C11E8A13740056D1FC /* MYNewCollectionViewCell.m */; };
 		8852E0C61E8A2EBD0056D1FC /* MYNewPlayerInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8852E0C51E8A2EBD0056D1FC /* MYNewPlayerInfoModel.m */; };
 		88584FB61E9DFC3800575695 /* UIImage+MY_Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 88584FB51E9DFC3800575695 /* UIImage+MY_Image.m */; };
@@ -189,7 +188,10 @@
 		885851BD1E9E26C600575695 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 885851BB1E9E26C600575695 /* MBProgressHUD+Add.m */; };
 		885851BE1E9E26C600575695 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 885851BC1E9E26C600575695 /* MBProgressHUD.bundle */; };
 		885851C21E9E276B00575695 /* UIView+MY_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 885851C11E9E276B00575695 /* UIView+MY_View.m */; };
-		885BD66C1E88E1F300FB2E6A /* MYHotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 885BD66B1E88E1F300FB2E6A /* MYHotTableViewCell.m */; };
+		8880AC951EA059F400DE0337 /* MYHotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880AC8B1EA059F400DE0337 /* MYHotTableViewCell.m */; };
+		8880AC961EA059F500DE0337 /* MYHotPlayerBottomToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880AC8E1EA059F400DE0337 /* MYHotPlayerBottomToolView.m */; };
+		8880AC971EA059F500DE0337 /* MYHotPlayerAnchorInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880AC911EA059F400DE0337 /* MYHotPlayerAnchorInfoView.m */; };
+		8880AC981EA059F500DE0337 /* MYHotPlayerUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880AC941EA059F400DE0337 /* MYHotPlayerUserInfoView.m */; };
 		888E94441E80BC1100A41B72 /* UIFont+MY_Font.m in Sources */ = {isa = PBXBuildFile; fileRef = 888E94431E80BC1100A41B72 /* UIFont+MY_Font.m */; };
 		888E94601E81057900A41B72 /* MYMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 888E945F1E81057900A41B72 /* MYMineViewController.m */; };
 		888E94631E81060600A41B72 /* MYTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 888E94621E81060600A41B72 /* MYTextViewController.m */; };
@@ -253,8 +255,6 @@
 		883CF8A91E8200D1005CDCDA /* MYLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYLiveViewController.m; sourceTree = "<group>"; };
 		883CF8AB1E820D83005CDCDA /* MYFreedomLive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYFreedomLive.h; sourceTree = "<group>"; };
 		883CF8AC1E820D83005CDCDA /* MYFreedomLive.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYFreedomLive.pch; sourceTree = "<group>"; };
-		884F2CDE1E8B94B800C7E3C5 /* MYHotPlayerAnchorInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYHotPlayerAnchorInfoView.h; sourceTree = "<group>"; };
-		884F2CDF1E8B94B800C7E3C5 /* MYHotPlayerAnchorInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYHotPlayerAnchorInfoView.m; sourceTree = "<group>"; };
 		8852E0C01E8A13740056D1FC /* MYNewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYNewCollectionViewCell.h; sourceTree = "<group>"; };
 		8852E0C11E8A13740056D1FC /* MYNewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYNewCollectionViewCell.m; sourceTree = "<group>"; };
 		8852E0C41E8A2EBD0056D1FC /* MYNewPlayerInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYNewPlayerInfoModel.h; sourceTree = "<group>"; };
@@ -603,8 +603,15 @@
 		885851BC1E9E26C600575695 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		885851C01E9E276B00575695 /* UIView+MY_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MY_View.h"; sourceTree = "<group>"; };
 		885851C11E9E276B00575695 /* UIView+MY_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MY_View.m"; sourceTree = "<group>"; };
-		885BD66A1E88E1F300FB2E6A /* MYHotTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYHotTableViewCell.h; sourceTree = "<group>"; };
-		885BD66B1E88E1F300FB2E6A /* MYHotTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYHotTableViewCell.m; sourceTree = "<group>"; };
+		8880AC8A1EA059F400DE0337 /* MYHotTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYHotTableViewCell.h; sourceTree = "<group>"; };
+		8880AC8B1EA059F400DE0337 /* MYHotTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYHotTableViewCell.m; sourceTree = "<group>"; };
+		8880AC8D1EA059F400DE0337 /* MYHotPlayerBottomToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYHotPlayerBottomToolView.h; sourceTree = "<group>"; };
+		8880AC8E1EA059F400DE0337 /* MYHotPlayerBottomToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYHotPlayerBottomToolView.m; sourceTree = "<group>"; };
+		8880AC901EA059F400DE0337 /* MYHotPlayerAnchorInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYHotPlayerAnchorInfoView.h; sourceTree = "<group>"; };
+		8880AC911EA059F400DE0337 /* MYHotPlayerAnchorInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYHotPlayerAnchorInfoView.m; sourceTree = "<group>"; };
+		8880AC931EA059F400DE0337 /* MYHotPlayerUserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYHotPlayerUserInfoView.h; sourceTree = "<group>"; };
+		8880AC941EA059F400DE0337 /* MYHotPlayerUserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYHotPlayerUserInfoView.m; sourceTree = "<group>"; };
+		8880AC991EA05A6900DE0337 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		888E94421E80BC1100A41B72 /* UIFont+MY_Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MY_Font.h"; sourceTree = "<group>"; };
 		888E94431E80BC1100A41B72 /* UIFont+MY_Font.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MY_Font.m"; sourceTree = "<group>"; };
 		888E945E1E81057900A41B72 /* MYMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYMineViewController.h; sourceTree = "<group>"; };
@@ -717,15 +724,6 @@
 			children = (
 			);
 			path = UIColor;
-			sourceTree = "<group>";
-		};
-		884F2CDD1E8B948800C7E3C5 /* HotPlayerView */ = {
-			isa = PBXGroup;
-			children = (
-				884F2CDE1E8B94B800C7E3C5 /* MYHotPlayerAnchorInfoView.h */,
-				884F2CDF1E8B94B800C7E3C5 /* MYHotPlayerAnchorInfoView.m */,
-			);
-			path = HotPlayerView;
 			sourceTree = "<group>";
 		};
 		8852E0C31E8A2E9D0056D1FC /* NewModel */ = {
@@ -1156,6 +1154,53 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		8880AC881EA059F400DE0337 /* HotView */ = {
+			isa = PBXGroup;
+			children = (
+				8880AC891EA059F400DE0337 /* HotCell */,
+				8880AC8C1EA059F400DE0337 /* HotPlayerBottom */,
+				8880AC8F1EA059F400DE0337 /* HotPlayerTop */,
+				8880AC921EA059F400DE0337 /* HotPlayerUserInfo */,
+			);
+			path = HotView;
+			sourceTree = "<group>";
+		};
+		8880AC891EA059F400DE0337 /* HotCell */ = {
+			isa = PBXGroup;
+			children = (
+				8880AC8A1EA059F400DE0337 /* MYHotTableViewCell.h */,
+				8880AC8B1EA059F400DE0337 /* MYHotTableViewCell.m */,
+			);
+			path = HotCell;
+			sourceTree = "<group>";
+		};
+		8880AC8C1EA059F400DE0337 /* HotPlayerBottom */ = {
+			isa = PBXGroup;
+			children = (
+				8880AC8D1EA059F400DE0337 /* MYHotPlayerBottomToolView.h */,
+				8880AC8E1EA059F400DE0337 /* MYHotPlayerBottomToolView.m */,
+			);
+			path = HotPlayerBottom;
+			sourceTree = "<group>";
+		};
+		8880AC8F1EA059F400DE0337 /* HotPlayerTop */ = {
+			isa = PBXGroup;
+			children = (
+				8880AC901EA059F400DE0337 /* MYHotPlayerAnchorInfoView.h */,
+				8880AC911EA059F400DE0337 /* MYHotPlayerAnchorInfoView.m */,
+			);
+			path = HotPlayerTop;
+			sourceTree = "<group>";
+		};
+		8880AC921EA059F400DE0337 /* HotPlayerUserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				8880AC931EA059F400DE0337 /* MYHotPlayerUserInfoView.h */,
+				8880AC941EA059F400DE0337 /* MYHotPlayerUserInfoView.m */,
+			);
+			path = HotPlayerUserInfo;
+			sourceTree = "<group>";
+		};
 		888E943D1E80B9FA00A41B72 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -1410,8 +1455,7 @@
 		88B2C94F1E7FAFCD00F193BA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				884F2CDD1E8B948800C7E3C5 /* HotPlayerView */,
-				88D2B3C61E889D6F003839FE /* HotCell */,
+				8880AC881EA059F400DE0337 /* HotView */,
 				88F98C101E825AED003F88D6 /* NewCell */,
 			);
 			path = Views;
@@ -1524,15 +1568,6 @@
 			path = MYBasicCollectionCon;
 			sourceTree = "<group>";
 		};
-		88D2B3C61E889D6F003839FE /* HotCell */ = {
-			isa = PBXGroup;
-			children = (
-				885BD66A1E88E1F300FB2E6A /* MYHotTableViewCell.h */,
-				885BD66B1E88E1F300FB2E6A /* MYHotTableViewCell.m */,
-			);
-			path = HotCell;
-			sourceTree = "<group>";
-		};
 		88F98C101E825AED003F88D6 /* NewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1545,6 +1580,7 @@
 		A4AF5A22874B055A52A0D70A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8880AC991EA05A6900DE0337 /* IJKMediaFramework.framework */,
 				2BCBB091BD80A2FB3673CDCE /* libPods-MYFreedomLive.a */,
 			);
 			name = Frameworks;
@@ -1776,7 +1812,6 @@
 				885851371E9DFE9000575695 /* GPUImageExclusionBlendFilter.m in Sources */,
 				885851111E9DFE9000575695 /* GLProgram.m in Sources */,
 				8858515A1E9DFE9000575695 /* GPUImageLightenBlendFilter.m in Sources */,
-				884F2CE01E8B94B800C7E3C5 /* MYHotPlayerAnchorInfoView.m in Sources */,
 				885851291E9DFE9000575695 /* GPUImageColorPackingFilter.m in Sources */,
 				885851941E9DFE9000575695 /* GPUImageSphereRefractionFilter.m in Sources */,
 				885851931E9DFE9000575695 /* GPUImageSourceOverBlendFilter.m in Sources */,
@@ -1879,6 +1914,7 @@
 				8858517B1E9DFE9000575695 /* GPUImagePolarPixellateFilter.m in Sources */,
 				885851A51E9DFE9000575695 /* GPUImageTwoPassFilter.m in Sources */,
 				8858516B1E9DFE9000575695 /* GPUImageMovie.m in Sources */,
+				8880AC971EA059F500DE0337 /* MYHotPlayerAnchorInfoView.m in Sources */,
 				88584FB61E9DFC3800575695 /* UIImage+MY_Image.m in Sources */,
 				8858511D1E9DFE9000575695 /* GPUImageBuffer.m in Sources */,
 				885851261E9DFE9000575695 /* GPUImageColorDodgeBlendFilter.m in Sources */,
@@ -1891,6 +1927,7 @@
 				885851B21E9DFE9000575695 /* GPUImagePicture+TextureSubimage.m in Sources */,
 				8858517D1E9DFE9000575695 /* GPUImagePosterizeFilter.m in Sources */,
 				8852E0C21E8A13740056D1FC /* MYNewCollectionViewCell.m in Sources */,
+				8880AC961EA059F500DE0337 /* MYHotPlayerBottomToolView.m in Sources */,
 				885851211E9DFE9000575695 /* GPUImageChromaKeyBlendFilter.m in Sources */,
 				8858515B1E9DFE9000575695 /* GPUImageLinearBurnBlendFilter.m in Sources */,
 				8858513F1E9DFE9000575695 /* GPUImageFramebufferCache.m in Sources */,
@@ -1910,13 +1947,13 @@
 				885851A71E9DFE9000575695 /* GPUImageUIElement.m in Sources */,
 				885851861E9DFE9000575695 /* GPUImageSaturationBlendFilter.m in Sources */,
 				888E94441E80BC1100A41B72 /* UIFont+MY_Font.m in Sources */,
-				885BD66C1E88E1F300FB2E6A /* MYHotTableViewCell.m in Sources */,
 				88B2C9021E7F8A1300F193BA /* main.m in Sources */,
 				8858518B1E9DFE9000575695 /* GPUImageShiTomasiFeatureDetectionFilter.m in Sources */,
 				885851871E9DFE9000575695 /* GPUImageSaturationFilter.m in Sources */,
 				8858514C1E9DFE9000575695 /* GPUImageHistogramEqualizationFilter.m in Sources */,
 				8858519F1E9DFE9000575695 /* GPUImageTiltShiftFilter.m in Sources */,
 				885851A91E9DFE9000575695 /* GPUImageVideoCamera.m in Sources */,
+				8880AC981EA059F500DE0337 /* MYHotPlayerUserInfoView.m in Sources */,
 				885851381E9DFE9000575695 /* GPUImageExposureFilter.m in Sources */,
 				885851171E9DFE9000575695 /* GPUImageAmatorkaFilter.m in Sources */,
 				885851311E9DFE9000575695 /* GPUImageDirectionalNonMaximumSuppressionFilter.m in Sources */,
@@ -1941,6 +1978,7 @@
 				885851971E9DFE9000575695 /* GPUImageSubtractBlendFilter.m in Sources */,
 				885851131E9DFE9000575695 /* GPUImage3x3TextureSamplingFilter.m in Sources */,
 				8858514A1E9DFE9000575695 /* GPUImageHighlightShadowFilter.m in Sources */,
+				8880AC951EA059F400DE0337 /* MYHotTableViewCell.m in Sources */,
 				88B2C9481E7FAF5A00F193BA /* MYBasicViewController.m in Sources */,
 				885851491E9DFE9000575695 /* GPUImageHazeFilter.m in Sources */,
 				8858515F1E9DFE9000575695 /* GPUImageLowPassFilter.m in Sources */,
@@ -2097,6 +2135,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3858N9SG7V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MYFreedomLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Meiyang.MYFreedomLive;
@@ -2110,6 +2152,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3858N9SG7V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MYFreedomLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Meiyang.MYFreedomLive;

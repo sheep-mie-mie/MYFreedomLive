@@ -33,10 +33,14 @@
 - (UIImage *)imageFromSelfView;
 
 
+
+
 /**
- 设置高度一般的圆弧
+ 切圆角
+
+ @param cornerRadius 圆角的度
  */
-- (void)maskVIewToBoundsHalfHeight;
+- (void)maskViewToBoundsWithCornerRadius:(CGFloat)cornerRadius;
 
 
 @end

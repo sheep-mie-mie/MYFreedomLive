@@ -8,21 +8,24 @@
 
 #import "MYHotPlayerViewController.h"
 #import "MYHotPlayerAnchorInfoView.h"
+#import "MYHotPlayerUserInfoView.h"
 
 @interface MYHotPlayerViewController ()
-/** 
- 全部主播数据源
+/**全部主播数据源
  */
 @property (nonatomic, strong) NSMutableArray <MYHotPlayerInfoDataListModel *> *allHotPlayerInfoArr;
-/**
- 当前播放
+/**当前播放
  */
 @property (nonatomic, strong) MYHotPlayerInfoDataListModel *currentPlayerInfoData;
-
-/**
- 顶视图
+/**顶视图
  */
 @property (nonatomic, strong) MYHotPlayerAnchorInfoView *playerAncher;
+/**用户信息
+ */
+@property (nonatomic, strong) MYHotPlayerUserInfoView *playerUserInfo;
+
+
+
 
 @end
 
@@ -94,14 +97,28 @@
     return _allHotPlayerInfoArr;
 }
 
-- (MYHotPlayerAnchorInfoView *)playerAncher {
+- (MYHotPlayerAnchorInfoView *)playerAncher { // 顶部视图
     if (!_playerAncher) {
+        MYWEAKSELF;
         _playerAncher = [[MYHotPlayerAnchorInfoView alloc] initWithFrame:CGRectMake(0, 20, MAINSCREEN_WIDTH, 180.f * AutoSizeScaleY) withHotDataArr:self.allHotPlayerInfoArr hotModel:self.currentPlayerInfoData];
-        
-        
+        _playerAncher.clickPlayerPicClick = ^(MYHotPlayerInfoDataListModel *model) {
+            [weakSelf.playerUserInfo showCurrentUserModel:weakSelf.currentPlayerInfoData toView:weakSelf.view];
+            weakSelf.playerUserInfo.clickUserInfoSelectBlock = ^() {
+                weakSelf.currentPlayerInfoData = model;
+            };
+        };
     }
     return _playerAncher;
 }
+
+- (MYHotPlayerUserInfoView *)playerUserInfo { // 用户信息
+    if (!_playerUserInfo) {
+        _playerUserInfo = [[MYHotPlayerUserInfoView alloc] initWithFrame:self.view.bounds];
+    }
+    return _playerUserInfo;
+}
+
+
 
 
 @end

@@ -126,12 +126,11 @@
     [self maskViewToBounds:self.buttonGift];
 }
 
-
 - (void)userBtnAction {
-    
-    
+    if (self.clickPlayerPicClick) {
+        self.clickPlayerPicClick(self.currentPlayerInfoData);
+    }
     DTLog(@"跳转直播间");
-    
 }
 
 - (void)attractBtnAction {

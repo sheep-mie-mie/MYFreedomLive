@@ -17,7 +17,7 @@
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.labelText = text;
-    hud.labelFont = [UIFont GfontWithName:@"Verdana-Bold" size:16.f];
+    hud.labelFont = [UIFont my_FontWithName:@"Verdana-Bold" size:16.f];
     // 设置图片
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", icon]]];
     // 再设置模式
@@ -49,7 +49,7 @@
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.labelText = message;
-    hud.labelFont = [UIFont GfontWithName:@"Verdana-Bold" size:16.f];
+    hud.labelFont = [UIFont my_FontWithName:@"Verdana-Bold" size:16.f];
     // 隐藏时候从父控件中移除
     hud.removeFromSuperViewOnHide = YES;
     // YES代表需要蒙版效果
@@ -60,7 +60,7 @@
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
     hud.labelText = message;
-    hud.labelFont = [UIFont GfontWithName:@"Verdana-Bold" size:16.f];
+    hud.labelFont = [UIFont my_FontWithName:@"Verdana-Bold" size:16.f];
     // 隐藏时候从父控件中移除
     hud.removeFromSuperViewOnHide = YES;
     // YES代表需要蒙版效果

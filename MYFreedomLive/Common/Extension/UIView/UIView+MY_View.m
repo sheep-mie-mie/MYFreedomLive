@@ -60,14 +60,15 @@
 
 
 /**
- 设置高度一般的圆弧
+ 切圆角
+ 
+ @param cornerRadius 圆角的度
  */
-- (void)maskVIewToBoundsHalfHeight {
-    self.layer.cornerRadius  = CGRectGetHeight(self.bounds) * 0.5;
+- (void)maskViewToBoundsWithCornerRadius:(CGFloat)cornerRadius {
+    
+    self.layer.cornerRadius  = cornerRadius;
     self.layer.masksToBounds = YES;
 }
-
-
 
 
 

@@ -32,6 +32,19 @@
  */
 @property (nonatomic, strong) MYHotPlayerInfoDataListModel *currentPlayerInfoData;
 
+/**
+ 关闭定时器
+ */
+- (void)closeTimer;
+
+
+/**
+ 点击头像按钮block
+ */
+@property (nonatomic, copy  ) void(^clickPlayerPicClick)(MYHotPlayerInfoDataListModel *model);
+
+
+
 
 
 @end
