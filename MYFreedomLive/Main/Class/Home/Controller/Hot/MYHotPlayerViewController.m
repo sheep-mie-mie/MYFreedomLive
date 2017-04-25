@@ -11,21 +11,19 @@
 #import "MYHotPlayerUserInfoView.h"
 
 @interface MYHotPlayerViewController ()
-/**全部主播数据源
- */
+/**全部主播数据源*/
 @property (nonatomic, strong) NSMutableArray <MYHotPlayerInfoDataListModel *> *allHotPlayerInfoArr;
-/**当前播放
- */
+/**当前播放*/
 @property (nonatomic, strong) MYHotPlayerInfoDataListModel *currentPlayerInfoData;
-/**顶视图
- */
+/**顶视图*/
 @property (nonatomic, strong) MYHotPlayerAnchorInfoView *playerAncher;
-/**用户信息
- */
+/**用户信息*/
 @property (nonatomic, strong) MYHotPlayerUserInfoView *playerUserInfo;
-
-
-
+/**同一类型的主播*/
+@property (nonatomic, strong) <#name#> *<#name#>;
+@property (nonatomic, strong) UIImageView *imvStartPlaceHolder;
+/**直播播放器*/
+@property (nonatomic, strong) IJKFFMoviePlayerController *ijkMoviePlayer;
 
 @end
 
@@ -39,6 +37,20 @@
     return self;
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    if (self.ijkMoviePlayer) {
+        [self.ijkMoviePlayer pause];
+        [self.ijkMoviePlayer stop];
+        [self.ijkMoviePlayer shutdown];
+        [self.ijkMoviePlayer.view removeFromSuperview];
+        self.ijkMoviePlayer = nil;
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -59,8 +71,6 @@
 
 
 
-
-
 #pragma mark ==============//重写Setter方法\\==============
 @synthesize allHotPlayerInfoArr = _allHotPlayerInfoArr;
 - (void)setAllHotPlayerInfoArr:(NSMutableArray<MYHotPlayerInfoDataListModel *> *)allHotPlayerInfoArr {
@@ -73,12 +83,27 @@
 
 @synthesize currentPlayerInfoData = _currentPlayerInfoData;
 - (void)setCurrentPlayerInfoData:(MYHotPlayerInfoDataListModel *)currentPlayerInfoData {
-    if (currentPlayerInfoData == nil) {
-        return;
-    }
+    if (currentPlayerInfoData == nil) return;
     _currentPlayerInfoData = currentPlayerInfoData;
     
 }
+
+#pragma mark ==============//private method\\==============
+- (void)playFlv:(NSString *)flv placeHolderUrl:(NSString *)placeHolderUrl {
+    DTLog(@"%@",flv);
+    __weak typeof(self)WeakSelf = self;
+    if (self.ijkMoviePlayer) {
+        [self.view insertSubview:self.imvStartPlaceHolder aboveSubview:self.ijkMoviePlayer.view];
+        if (self.) {
+            <#statements#>
+        }
+        
+    }
+    
+    
+    
+}
+
 
 
 
@@ -117,6 +142,20 @@
     }
     return _playerUserInfo;
 }
+
+- (UIImageView *)imvStartPlaceHolder {
+    if (!_imvStartPlaceHolder) {
+        _imvStartPlaceHolder = [UIImageView new];
+        _imvStartPlaceHolder.frame = self.view.bounds;
+        _imvStartPlaceHolder.image = ImageNamed(@"profile_user_414x414");
+        [self.view addSubview:_imvStartPlaceHolder];
+        [self showGifLoading:nil inView:_imvStartPlaceHolder];
+        [_imvStartPlaceHolder layoutIfNeeded];
+    }
+    return _imvStartPlaceHolder;
+}
+
+
 
 
 

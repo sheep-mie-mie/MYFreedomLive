@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8805FD3E1EADE7F50080B024 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8880AC991EA05A6900DE0337 /* IJKMediaFramework.framework */; };
+		8805FD401EADE8030080B024 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8805FD3F1EADE8030080B024 /* libz.tbd */; };
+		8805FD421EADE8130080B024 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8805FD411EADE8130080B024 /* libbz2.tbd */; };
+		8805FD441EADE8210080B024 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8805FD431EADE8210080B024 /* AudioToolbox.framework */; };
+		8805FD461EADE8720080B024 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8805FD451EADE8720080B024 /* AVFoundation.framework */; };
+		8805FD481EADE87E0080B024 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8805FD471EADE87E0080B024 /* CoreGraphics.framework */; };
+		8805FD4A1EADE88F0080B024 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8805FD491EADE88E0080B024 /* CoreMedia.framework */; };
+		8805FD4E1EADE8B50080B024 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8805FD4D1EADE8B50080B024 /* CoreVideo.framework */; };
+		8805FD501EADE8D90080B024 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8805FD4F1EADE8D90080B024 /* MediaPlayer.framework */; };
+		8805FD521EADE8EB0080B024 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8805FD511EADE8EB0080B024 /* MobileCoreServices.framework */; };
+		8805FD541EADE8F90080B024 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8805FD531EADE8F90080B024 /* OpenGLES.framework */; };
+		8805FD561EADE9000080B024 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8805FD551EADE9000080B024 /* QuartzCore.framework */; };
+		8805FD581EADE9080080B024 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8805FD571EADE9080080B024 /* UIKit.framework */; };
+		8805FD5A1EADE9170080B024 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8805FD591EADE9170080B024 /* VideoToolbox.framework */; };
 		8810F4C21E8909A0005124B3 /* MYHotAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810F4C11E8909A0005124B3 /* MYHotAdViewController.m */; };
 		8810F4C51E890A0D005124B3 /* MYHotPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8810F4C41E890A0D005124B3 /* MYHotPlayerViewController.m */; };
 		8824378D1E82725A004DC2B2 /* MYNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 8824378C1E82725A004DC2B2 /* MYNetwork.m */; };
@@ -192,6 +206,8 @@
 		8880AC961EA059F500DE0337 /* MYHotPlayerBottomToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880AC8E1EA059F400DE0337 /* MYHotPlayerBottomToolView.m */; };
 		8880AC971EA059F500DE0337 /* MYHotPlayerAnchorInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880AC911EA059F400DE0337 /* MYHotPlayerAnchorInfoView.m */; };
 		8880AC981EA059F500DE0337 /* MYHotPlayerUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880AC941EA059F400DE0337 /* MYHotPlayerUserInfoView.m */; };
+		888D13AE1EAF3E6000B914B2 /* UIImageView+MY_UIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 888D13AD1EAF3E6000B914B2 /* UIImageView+MY_UIImageView.m */; };
+		888D13B21EAF445700B914B2 /* MYHotPlayerCatEarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 888D13B11EAF445700B914B2 /* MYHotPlayerCatEarView.m */; };
 		888E94441E80BC1100A41B72 /* UIFont+MY_Font.m in Sources */ = {isa = PBXBuildFile; fileRef = 888E94431E80BC1100A41B72 /* UIFont+MY_Font.m */; };
 		888E94601E81057900A41B72 /* MYMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 888E945F1E81057900A41B72 /* MYMineViewController.m */; };
 		888E94631E81060600A41B72 /* MYTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 888E94621E81060600A41B72 /* MYTextViewController.m */; };
@@ -243,6 +259,20 @@
 
 /* Begin PBXFileReference section */
 		2BCBB091BD80A2FB3673CDCE /* libPods-MYFreedomLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MYFreedomLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8805FD3F1EADE8030080B024 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		8805FD411EADE8130080B024 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		8805FD431EADE8210080B024 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8805FD451EADE8720080B024 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8805FD471EADE87E0080B024 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8805FD491EADE88E0080B024 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		8805FD4B1EADE89A0080B024 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		8805FD4D1EADE8B50080B024 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		8805FD4F1EADE8D90080B024 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		8805FD511EADE8EB0080B024 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		8805FD531EADE8F90080B024 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		8805FD551EADE9000080B024 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8805FD571EADE9080080B024 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8805FD591EADE9170080B024 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		8810F4C01E8909A0005124B3 /* MYHotAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYHotAdViewController.h; sourceTree = "<group>"; };
 		8810F4C11E8909A0005124B3 /* MYHotAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYHotAdViewController.m; sourceTree = "<group>"; };
 		8810F4C31E890A0D005124B3 /* MYHotPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYHotPlayerViewController.h; sourceTree = "<group>"; };
@@ -612,6 +642,10 @@
 		8880AC931EA059F400DE0337 /* MYHotPlayerUserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYHotPlayerUserInfoView.h; sourceTree = "<group>"; };
 		8880AC941EA059F400DE0337 /* MYHotPlayerUserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYHotPlayerUserInfoView.m; sourceTree = "<group>"; };
 		8880AC991EA05A6900DE0337 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		888D13AC1EAF3E6000B914B2 /* UIImageView+MY_UIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MY_UIImageView.h"; sourceTree = "<group>"; };
+		888D13AD1EAF3E6000B914B2 /* UIImageView+MY_UIImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MY_UIImageView.m"; sourceTree = "<group>"; };
+		888D13B01EAF445700B914B2 /* MYHotPlayerCatEarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYHotPlayerCatEarView.h; sourceTree = "<group>"; };
+		888D13B11EAF445700B914B2 /* MYHotPlayerCatEarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYHotPlayerCatEarView.m; sourceTree = "<group>"; };
 		888E94421E80BC1100A41B72 /* UIFont+MY_Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MY_Font.h"; sourceTree = "<group>"; };
 		888E94431E80BC1100A41B72 /* UIFont+MY_Font.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MY_Font.m"; sourceTree = "<group>"; };
 		888E945E1E81057900A41B72 /* MYMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYMineViewController.h; sourceTree = "<group>"; };
@@ -680,6 +714,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8805FD5A1EADE9170080B024 /* VideoToolbox.framework in Frameworks */,
+				8805FD581EADE9080080B024 /* UIKit.framework in Frameworks */,
+				8805FD561EADE9000080B024 /* QuartzCore.framework in Frameworks */,
+				8805FD541EADE8F90080B024 /* OpenGLES.framework in Frameworks */,
+				8805FD521EADE8EB0080B024 /* MobileCoreServices.framework in Frameworks */,
+				8805FD501EADE8D90080B024 /* MediaPlayer.framework in Frameworks */,
+				8805FD4E1EADE8B50080B024 /* CoreVideo.framework in Frameworks */,
+				8805FD4A1EADE88F0080B024 /* CoreMedia.framework in Frameworks */,
+				8805FD481EADE87E0080B024 /* CoreGraphics.framework in Frameworks */,
+				8805FD461EADE8720080B024 /* AVFoundation.framework in Frameworks */,
+				8805FD441EADE8210080B024 /* AudioToolbox.framework in Frameworks */,
+				8805FD421EADE8130080B024 /* libbz2.tbd in Frameworks */,
+				8805FD401EADE8030080B024 /* libz.tbd in Frameworks */,
+				8805FD3E1EADE7F50080B024 /* IJKMediaFramework.framework in Frameworks */,
 				FB28CDB85B077351CA581E83 /* libPods-MYFreedomLive.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1150,6 +1198,8 @@
 			children = (
 				885851C01E9E276B00575695 /* UIView+MY_View.h */,
 				885851C11E9E276B00575695 /* UIView+MY_View.m */,
+				888D13AC1EAF3E6000B914B2 /* UIImageView+MY_UIImageView.h */,
+				888D13AD1EAF3E6000B914B2 /* UIImageView+MY_UIImageView.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -1157,6 +1207,7 @@
 		8880AC881EA059F400DE0337 /* HotView */ = {
 			isa = PBXGroup;
 			children = (
+				888D13AF1EAF442600B914B2 /* HotPlayCatEar */,
 				8880AC891EA059F400DE0337 /* HotCell */,
 				8880AC8C1EA059F400DE0337 /* HotPlayerBottom */,
 				8880AC8F1EA059F400DE0337 /* HotPlayerTop */,
@@ -1199,6 +1250,15 @@
 				8880AC941EA059F400DE0337 /* MYHotPlayerUserInfoView.m */,
 			);
 			path = HotPlayerUserInfo;
+			sourceTree = "<group>";
+		};
+		888D13AF1EAF442600B914B2 /* HotPlayCatEar */ = {
+			isa = PBXGroup;
+			children = (
+				888D13B01EAF445700B914B2 /* MYHotPlayerCatEarView.h */,
+				888D13B11EAF445700B914B2 /* MYHotPlayerCatEarView.m */,
+			);
+			path = HotPlayCatEar;
 			sourceTree = "<group>";
 		};
 		888E943D1E80B9FA00A41B72 /* Extension */ = {
@@ -1580,6 +1640,20 @@
 		A4AF5A22874B055A52A0D70A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8805FD591EADE9170080B024 /* VideoToolbox.framework */,
+				8805FD571EADE9080080B024 /* UIKit.framework */,
+				8805FD551EADE9000080B024 /* QuartzCore.framework */,
+				8805FD531EADE8F90080B024 /* OpenGLES.framework */,
+				8805FD511EADE8EB0080B024 /* MobileCoreServices.framework */,
+				8805FD4F1EADE8D90080B024 /* MediaPlayer.framework */,
+				8805FD4D1EADE8B50080B024 /* CoreVideo.framework */,
+				8805FD4B1EADE89A0080B024 /* CoreAudio.framework */,
+				8805FD491EADE88E0080B024 /* CoreMedia.framework */,
+				8805FD471EADE87E0080B024 /* CoreGraphics.framework */,
+				8805FD451EADE8720080B024 /* AVFoundation.framework */,
+				8805FD431EADE8210080B024 /* AudioToolbox.framework */,
+				8805FD411EADE8130080B024 /* libbz2.tbd */,
+				8805FD3F1EADE8030080B024 /* libz.tbd */,
 				8880AC991EA05A6900DE0337 /* IJKMediaFramework.framework */,
 				2BCBB091BD80A2FB3673CDCE /* libPods-MYFreedomLive.a */,
 			);
@@ -1817,6 +1891,7 @@
 				885851931E9DFE9000575695 /* GPUImageSourceOverBlendFilter.m in Sources */,
 				8858518F1E9DFE9000575695 /* GPUImageSobelEdgeDetectionFilter.m in Sources */,
 				885851741E9DFE9000575695 /* GPUImageOverlayBlendFilter.m in Sources */,
+				888D13B21EAF445700B914B2 /* MYHotPlayerCatEarView.m in Sources */,
 				885851A11E9DFE9000575695 /* GPUImageToonFilter.m in Sources */,
 				8858518A1E9DFE9000575695 /* GPUImageSharpenFilter.m in Sources */,
 				885851471E9DFE9000575695 /* GPUImageHardLightBlendFilter.m in Sources */,
@@ -1943,6 +2018,7 @@
 				885851601E9DFE9000575695 /* GPUImageLuminanceRangeFilter.m in Sources */,
 				8858519C1E9DFE9000575695 /* GPUImageThresholdEdgeDetectionFilter.m in Sources */,
 				885851191E9DFE9000575695 /* GPUImageAverageLuminanceThresholdFilter.m in Sources */,
+				888D13AE1EAF3E6000B914B2 /* UIImageView+MY_UIImageView.m in Sources */,
 				885851301E9DFE9000575695 /* GPUImageDilationFilter.m in Sources */,
 				885851A71E9DFE9000575695 /* GPUImageUIElement.m in Sources */,
 				885851861E9DFE9000575695 /* GPUImageSaturationBlendFilter.m in Sources */,

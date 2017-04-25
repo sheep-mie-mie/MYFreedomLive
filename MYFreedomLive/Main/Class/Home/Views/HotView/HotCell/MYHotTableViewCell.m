@@ -140,7 +140,6 @@
 }
 
 
-
 #pragma mark ==============//懒加载\\==============
 - (UIImageView *)backgroundImageView {
     if (!_backgroundImageView) {

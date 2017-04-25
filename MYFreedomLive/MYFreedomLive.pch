@@ -45,6 +45,8 @@
 #import "UIScrollView+EmptyDataSet.h"
 // 轮播图
 #import "SDCycleScrollView.h"
+// IJK拉流
+#import <IJKMediaFramework/IJKMediaFramework.h>
 
 
 #pragma mark ==============//自定义类\\==============
@@ -52,6 +54,7 @@
 #import "UIFont+MY_Font.h"
 #import "UIImage+MY_Image.h"
 #import "UIView+MY_View.h"
+#import "UIImageView+MY_UIImageView.h"
 
 // app属性
 #import "MYFreedomLive.h"
