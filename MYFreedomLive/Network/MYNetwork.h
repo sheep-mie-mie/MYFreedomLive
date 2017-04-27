@@ -49,8 +49,18 @@
                              failure:(FailureBlock)failure
                             showView:(UIView *)showView;
 
+/**4
+ 直播加载下一段视频
 
-
+ @param url      视频网址
+ @param success  成功
+ @param failure  失败
+ @param showView 加载
+ */
++ (void)getLiveUrl:(NSString *)url
+           Success:(SuccessBlock)success
+           Failure:(FailureBlock)failure
+          ShowView:(UIView *)showView;
 
 
 

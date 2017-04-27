@@ -64,7 +64,21 @@
 }
 
 
-
+/**4
+ 直播加载下一段视频
+ */
++ (void)getLiveUrl:(NSString *)url
+           Success:(SuccessBlock)success
+           Failure:(FailureBlock)failure
+          ShowView:(UIView *)showView {
+    [GDHNetworkingManager getRequstWithURL:url params:nil successBlock:^(id returnData) {
+        success(returnData);
+    } failureBlock:^(NSError *error) {
+        failure(error);
+    } progress:^(int64_t bytesRead, int64_t totalBytesRead, int64_t totalBytesExpectedToRead) {
+        
+    } refreshCache:YES showView:showView];
+}
 
 
 

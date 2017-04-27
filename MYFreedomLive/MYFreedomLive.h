@@ -65,6 +65,13 @@
  */
 #define MYWEAKSELF __weak typeof(self)weakSelf = self
 
+/**
+ JSON数据
+ */
+#define JSON_STRING_WITH_OBJ(obj) (obj?[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:obj options:kNilOptions error:nil] encoding:NSUTF8StringEncoding]:nil)
+#define JSON_OBJECT_WITH_STRING(string) (string?[NSJSONSerialization JSONObjectWithData: [string dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil]:nil)
+
+
 
 
 #define MYFreedSingletonH(name) + (instancetype)share##name;

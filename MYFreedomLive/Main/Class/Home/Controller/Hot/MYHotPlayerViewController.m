@@ -9,6 +9,7 @@
 #import "MYHotPlayerViewController.h"
 #import "MYHotPlayerAnchorInfoView.h"
 #import "MYHotPlayerUserInfoView.h"
+#import "MYHotPlayerCatEarView.h"
 
 @interface MYHotPlayerViewController ()
 /**全部主播数据源*/
@@ -20,7 +21,8 @@
 /**用户信息*/
 @property (nonatomic, strong) MYHotPlayerUserInfoView *playerUserInfo;
 /**同一类型的主播*/
-@property (nonatomic, strong) <#name#> *<#name#>;
+@property (nonatomic, strong) MYHotPlayerCatEarView *viewCatEar;
+/**直播开始前的占位图片*/
 @property (nonatomic, strong) UIImageView *imvStartPlaceHolder;
 /**直播播放器*/
 @property (nonatomic, strong) IJKFFMoviePlayerController *ijkMoviePlayer;
@@ -85,7 +87,9 @@
 - (void)setCurrentPlayerInfoData:(MYHotPlayerInfoDataListModel *)currentPlayerInfoData {
     if (currentPlayerInfoData == nil) return;
     _currentPlayerInfoData = currentPlayerInfoData;
-    
+    [self playFlv:currentPlayerInfoData.flv placeHolderUrl:currentPlayerInfoData.bigpic];
+    DTLog(@"%@",currentPlayerInfoData.myname);
+    [self setAllHotPlayerInfoArr:self.allHotPlayerInfoArr];
 }
 
 #pragma mark ==============//private method\\==============
@@ -94,17 +98,121 @@
     __weak typeof(self)WeakSelf = self;
     if (self.ijkMoviePlayer) {
         [self.view insertSubview:self.imvStartPlaceHolder aboveSubview:self.ijkMoviePlayer.view];
-        if (self.) {
-            <#statements#>
+        if (self.viewCatEar) {
+            [self.viewCatEar removeFromSuperview];
+            self.viewCatEar = nil;
         }
-        
+        [self.ijkMoviePlayer shutdown];
+        [self.ijkMoviePlayer.view removeFromSuperview];
+        self.ijkMoviePlayer = nil;
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
     }
+    // 如果切换主播 取消之前的动画
+#warning ====Don`t finish this function
+//    if (self.) {
+//        <#statements#>
+//    }
+    // 加载视图
+    [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:placeHolderUrl] options:SDWebImageDownloaderUseNSURLCache progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        
+    } completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
+        if (image) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [WeakSelf showGifLoading:nil inView:WeakSelf.imvStartPlaceHolder];
+                WeakSelf.imvStartPlaceHolder.image = [UIImage blurryImage:image withBlurLevel:0.8f];
+            });
+        }
+    }];
+    
+    IJKFFOptions *options = [IJKFFOptions optionsByDefault];
+    [options setPlayerOptionIntValue:1 forKey:@"videotoolbox"];
+    // 帧速率(fps)可以改 确认非标准帧率会导致音画不同步 所以只能设定为15或者29.97
+    [options setPlayerOptionIntValue:29.97 forKey:@"r"];
+    // vol 设置音量大小 256为标准音量 要设置成两倍音量时则输入512 以此类推
+    [options setPlayerOptionIntValue:512 forKey:@"vol"];
+    
+    IJKFFMoviePlayerController *moviePlayer = [[IJKFFMoviePlayerController alloc] initWithContentURLString:flv withOptions:options];
+    moviePlayer.view.frame = self.view.bounds;
+    // 填充fill
+    moviePlayer.scalingMode = IJKMPMovieScalingModeAspectFill;
+    // 设置自动播放 必须设置为no 防止自动播放 才能更好的控制直播状态
+    moviePlayer.shouldAutoplay = NO;
+    [self.view insertSubview:moviePlayer.view atIndex:0];
+    // 准备播放
+    [moviePlayer prepareToPlay];
+    self.ijkMoviePlayer = moviePlayer;
+    // 设置监听
+    [self loadCreateObserver];
+#warning Don`t finish this function 
+    //显示 工会其他直播和类似主播
+    //[moviePlayer.view bringSubviewToFront:self];
     
     
     
 }
 
+/**
+ 设置监听
+ */
+- (void)loadCreateObserver {
+    [self.ijkMoviePlayer play];
+    // 监听视频是否播放完成
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didFinish) name:IJKMPMoviePlayerPlaybackDidFinishNotification object:self.ijkMoviePlayer];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stateDidChange) name:IJKMPMoviePlayerLoadStateDidChangeNotification object:self.ijkMoviePlayer];
+}
 
+#pragma mark ==============//notify method\\==============
+/**播放状态改变*/
+- (void)stateDidChange {
+    MYWEAKSELF;
+    if ((self.ijkMoviePlayer.loadState & IJKMPMovieLoadStatePlaythroughOK) != 0) {
+        if (!self.ijkMoviePlayer.isPlaying) {
+            [self hideGifLoading];
+            [self.ijkMoviePlayer play];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                if (self.imvStartPlaceHolder) {
+                    [self.imvStartPlaceHolder removeFromSuperview];
+                    self.imvStartPlaceHolder = nil;
+#warning Don`t Finish
+                    //[weakSelf.ijkMoviePlayer.view addSubview:weakSe];
+                    // 显示猫耳朵
+                    weakSelf.viewCatEar.hidden = NO;
+                }
+            });
+        }
+    } else if (self.ijkMoviePlayer.loadState & IJKMPMovieLoadStateStalled) {
+        // 网络不佳 自动暂停状态
+        [self showGifLoading:nil inView:self.ijkMoviePlayer.view];
+    }
+    // 如果网络不好 断开后恢复 也要去掉加载
+    if (self.gifView.isAnimating) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf hideGifLoading];
+        });
+    }
+}
+
+/**播放完成*/
+- (void)didFinish {
+    MYWEAKSELF;
+    DTLog(@"加载状态...%ld...%ld",self.ijkMoviePlayer.loadState, self.ijkMoviePlayer.playbackState);
+    // 因为网速 或者其他原因导致直播停止 也要显示GIF
+    if (self.ijkMoviePlayer.loadState & IJKMPMovieLoadStateStalled && !self.gifView) {
+        [self showGifLoading:nil inView:self.ijkMoviePlayer.view];
+        return;
+    }
+    // 方法 1.重新获取直播地址 服务器控制是否有地址返回 2.用户Http请求改地址 若请求成功表示直播未结束 否则结束
+    
+    [MYNetwork getLiveUrl:self.currentPlayerInfoData.flv Success:^(id returnData) {
+        DTLog(@"下一个直播:%@",JSON_STRING_WITH_OBJ(returnData));
+    } Failure:^(NSError *err) {
+        [weakSelf.ijkMoviePlayer shutdown];
+        [weakSelf.ijkMoviePlayer.view removeFromSuperview];
+        weakSelf.ijkMoviePlayer = nil;
+#warning Don`t Finish
+//        weakSelf.
+    } ShowView:nil];
+}
 
 
 
