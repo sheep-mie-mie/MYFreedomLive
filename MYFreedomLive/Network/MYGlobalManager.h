@@ -45,7 +45,13 @@ typedef void(^FailureBlock)(NSError *err);
                       withFont:(UIFont *)font;
 
 
+/**
+ 判断字符串是否为空 空返回YES  不空返回NO
 
+ @param value 字符串
+ @return      YES / NO
+ */
++ (BOOL)isNilValue:(NSString *)value;
 
 
 

@@ -37,8 +37,14 @@
 }
 
 
-
-
+// 判断字符串是否为空
++ (BOOL)isNilValue:(NSString *)value {
+    if (value == nil || value.length <= 0 || [value isEqualToString:@""] || [value isEqualToString:@"(null)"]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 
 
 
