@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MYPlusButtonSubClass.h"
+#import "MYLoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -86,9 +87,13 @@
     self.window.backgroundColor = RandColor;
     [self.window makeKeyAndVisible];
     
-    [MYPlusButtonSubClass registerPlusButton]; 
-    self.tabBar = [MYBasicTabBarController shareMainTabBar];
-    [self.window setRootViewController:self.tabBar];
+    [MYPlusButtonSubClass registerPlusButton];
+    
+    MYLoginViewController *loginVC = [MYLoginViewController new];
+    self.window.rootViewController = loginVC;
+    
+//    self.tabBar = [MYBasicTabBarController shareMainTabBar];
+//    [self.window setRootViewController:self.tabBar];
 }
 
 

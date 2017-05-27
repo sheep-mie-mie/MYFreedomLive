@@ -146,7 +146,7 @@
                 // 开始直播
                 LFLiveStreamInfo *info = [LFLiveStreamInfo new];
                 // 设置IP地址
-                info.url = @"rtmp://192.168.3.93:1935/rtmplive/room";
+                info.url = @"rtmp://192.168.2.126:1935/rtmplive/room";
                 self.rtmpUrl = info.url;
                 [self.session startLive:info];
             } else {

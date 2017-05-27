@@ -46,7 +46,7 @@
  设置界面状态
  */
 - (void)buildUpUserInfoView {
-    self.backgroundColor = [UIColor redColor];
+    self.backgroundColor = [UIColor clearColor];
     //self.backgroundColor = SXRGBAColor(100.f, 100.f, 100.f, 0);
     // 添加手势
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureAction)];

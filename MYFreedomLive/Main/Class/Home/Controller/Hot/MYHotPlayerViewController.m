@@ -66,12 +66,23 @@
  设置播放页面状态
  */
 - (void)buildHotPlayerViewState {
-    
+    MYWEAKSELF;
     [self.view addSubview:self.playerAncher];
     
+    UIButton *btnClose = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnClose setImage:ImageNamed(@"talk_close_40x40") forState:UIControlStateNormal];
+    [btnClose addTarget:self action:@selector(btnCloseClickAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btnClose];
+    [btnClose mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.height.mas_equalTo(40.f);
+        make.right.mas_equalTo(weakSelf.view.mas_right).offset(-10.f);
+        make.bottom.mas_equalTo(weakSelf.view.mas_bottom).offset(-10.f);
+    }];
 }
 
-
+- (void)btnCloseClickAction {
+    [self dismissViewControllerAnimated:MASAttributeCenterYWithinMargins completion:nil];
+}
 
 #pragma mark ==============//重写Setter方法\\==============
 @synthesize allHotPlayerInfoArr = _allHotPlayerInfoArr;

@@ -42,7 +42,7 @@
         self.allHotPlayerInfoArr   = hotDataArr;
         self.currentPlayerInfoData = hotModel;
         
-        self.backgroundColor = [UIColor lightGreen];
+        //self.backgroundColor = [UIColor lightGreen];
     }
     return self;
 }

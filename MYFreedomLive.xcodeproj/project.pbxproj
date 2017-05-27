@@ -221,6 +221,10 @@
 		889231381E8514210093CEE8 /* MYRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 889231371E8514210093CEE8 /* MYRefreshGifHeader.m */; };
 		8892313B1E85161A0093CEE8 /* MYRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8892313A1E85161A0093CEE8 /* MYRefreshHeader.m */; };
 		8892313E1E8517200093CEE8 /* MYRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8892313D1E8517200093CEE8 /* MYRefreshStateHeader.m */; };
+		88AC35CF1ED90B2700275013 /* MYWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AC35CE1ED90B2700275013 /* MYWaveView.m */; };
+		88AC35D71ED950B200275013 /* MYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AC35D61ED950B200275013 /* MYLoginViewController.m */; };
+		88AC35DA1ED953BE00275013 /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 88AC35D81ED953BE00275013 /* login_video.mp4 */; };
+		88AC35DB1ED953BE00275013 /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 88AC35D91ED953BE00275013 /* loginmovie.mp4 */; };
 		88B2C9021E7F8A1300F193BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B2C9011E7F8A1300F193BA /* main.m */; };
 		88B2C9051E7F8A1300F193BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B2C9041E7F8A1300F193BA /* AppDelegate.m */; };
 		88B2C9081E7F8A1300F193BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B2C9071E7F8A1300F193BA /* ViewController.m */; };
@@ -715,6 +719,12 @@
 		8892313C1E8517200093CEE8 /* MYRefreshStateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYRefreshStateHeader.h; sourceTree = "<group>"; };
 		8892313D1E8517200093CEE8 /* MYRefreshStateHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYRefreshStateHeader.m; sourceTree = "<group>"; };
 		8892313F1E8517570093CEE8 /* MY_RefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MY_RefreshHeader.h; sourceTree = "<group>"; };
+		88AC35CD1ED90B2700275013 /* MYWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYWaveView.h; sourceTree = "<group>"; };
+		88AC35CE1ED90B2700275013 /* MYWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYWaveView.m; sourceTree = "<group>"; };
+		88AC35D51ED950B200275013 /* MYLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYLoginViewController.h; sourceTree = "<group>"; };
+		88AC35D61ED950B200275013 /* MYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYLoginViewController.m; sourceTree = "<group>"; };
+		88AC35D81ED953BE00275013 /* login_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_video.mp4; sourceTree = "<group>"; };
+		88AC35D91ED953BE00275013 /* loginmovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie.mp4; sourceTree = "<group>"; };
 		88B2C8FD1E7F8A1300F193BA /* MYFreedomLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYFreedomLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B2C9011E7F8A1300F193BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88B2C9031E7F8A1300F193BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1443,6 +1453,58 @@
 			path = MYRefersh;
 			sourceTree = "<group>";
 		};
+		88AC35CC1ED90B0900275013 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88AC35CD1ED90B2700275013 /* MYWaveView.h */,
+				88AC35CE1ED90B2700275013 /* MYWaveView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		88AC35D01ED9508B00275013 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				88AC35D11ED9508B00275013 /* Controller */,
+				88AC35D21ED9508B00275013 /* Model */,
+				88AC35D31ED9508B00275013 /* Resource */,
+				88AC35D41ED9508B00275013 /* Views */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		88AC35D11ED9508B00275013 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88AC35D51ED950B200275013 /* MYLoginViewController.h */,
+				88AC35D61ED950B200275013 /* MYLoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		88AC35D21ED9508B00275013 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88AC35D31ED9508B00275013 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				88AC35D81ED953BE00275013 /* login_video.mp4 */,
+				88AC35D91ED953BE00275013 /* loginmovie.mp4 */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		88AC35D41ED9508B00275013 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		88B2C8F41E7F8A1300F193BA = {
 			isa = PBXGroup;
 			children = (
@@ -1538,6 +1600,7 @@
 			children = (
 				88B2C93A1E7FAA0300F193BA /* Basic */,
 				88B2C93F1E7FAA0300F193BA /* Class */,
+				88AC35D01ED9508B00275013 /* Login */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1692,7 +1755,7 @@
 			children = (
 				88B2C9551E7FAFCD00F193BA /* Controller */,
 				88B2C9561E7FAFCD00F193BA /* Model */,
-				88B2C9571E7FAFCD00F193BA /* Views */,
+				88AC35CC1ED90B0900275013 /* Views */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1713,13 +1776,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		88B2C9571E7FAFCD00F193BA /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		88B2C9611E7FD07900F193BA /* Attract */ = {
@@ -2159,8 +2215,10 @@
 				885851BE1E9E26C600575695 /* MBProgressHUD.bundle in Resources */,
 				8858510C1E9DFE9000575695 /* lookup.png in Resources */,
 				885851101E9DFE9000575695 /* lookup_soft_elegance_2.png in Resources */,
+				88AC35DB1ED953BE00275013 /* loginmovie.mp4 in Resources */,
 				88DC692D1ED7FCD200DBD8AC /* Info.plist in Resources */,
 				8858510E1E9DFE9000575695 /* lookup_miss_etikate.png in Resources */,
+				88AC35DA1ED953BE00275013 /* login_video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2367,6 +2425,7 @@
 				885851AD1E9DFE9000575695 /* GPUImageWhiteBalanceFilter.m in Sources */,
 				8858518C1E9DFE9000575695 /* GPUImageSingleComponentGaussianBlurFilter.m in Sources */,
 				885851901E9DFE9000575695 /* GPUImageSoftEleganceFilter.m in Sources */,
+				88AC35D71ED950B200275013 /* MYLoginViewController.m in Sources */,
 				88DC69241ED7FCD200DBD8AC /* AsyncUdpSocket.m in Sources */,
 				88B2C96D1E7FD1A900F193BA /* MYNewCollectionController.m in Sources */,
 				8858519E1E9DFE9000575695 /* GPUImageThresholdSketchFilter.m in Sources */,
@@ -2431,6 +2490,7 @@
 				88DC69351ED7FCD200DBD8AC /* avc.c in Sources */,
 				8858519C1E9DFE9000575695 /* GPUImageThresholdEdgeDetectionFilter.m in Sources */,
 				885851191E9DFE9000575695 /* GPUImageAverageLuminanceThresholdFilter.m in Sources */,
+				88AC35CF1ED90B2700275013 /* MYWaveView.m in Sources */,
 				888D13AE1EAF3E6000B914B2 /* UIImageView+MY_UIImageView.m in Sources */,
 				885851301E9DFE9000575695 /* GPUImageDilationFilter.m in Sources */,
 				885851A71E9DFE9000575695 /* GPUImageUIElement.m in Sources */,
